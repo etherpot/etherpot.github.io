@@ -1,0 +1,103 @@
+<html>
+  <head>
+    <title>EtherPot</title>
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bower_components/flatui/css/flat-ui.css">
+    <style>
+    	body{padding-top: 60px}
+    	[ng-cloak]{display: none}
+      [ng-click]{cursor: pointer;}
+    	#hero{text-align: center;margin-bottom: 20px}
+    	#pot{font-size: 48px;}
+      #tabs{margin-bottom: 20px}
+      iframe.twitter-follow-button{margin-top: 10px;}
+      h1{
+        margin: 10px 0;
+        font: 900 80px/100px "Helvetica Neue", Helvetica, Arial, sans-serif;
+        letter-spacing: -2px;
+      }
+      #tagline{
+        display: block;
+        padding-top: 5px;
+        font-size: 16px;
+        font-weight: 700;
+        color: #666;
+        letter-spacing: 0;
+      }
+      #logo{
+        margin-top:-10px;
+        height:.8em;
+      }
+      #screenshot{max-width: 100%}
+      #downloads{font-size: 17px}
+      #faq{
+        background-color:#3498DB;
+        color:#ECF0F1;
+        padding:50px 0;
+      }
+      #faq h3{margin-bottom: 10px}
+      #faq p{color:#ccc}
+      .codeblock{background-color:black;color:white;font-weight: bold}
+      #hint{
+        line-height: 1.5em;
+        margin-top:20px;
+      }
+      #faq a{color:inherit;}
+    </style>
+  </head>
+  <body ng-app="app">
+  	<div class="container" id="hero">
+      <div class="row">
+        <div class="col col-md-5">
+          <h1>EtherPot <img id="logo" src="logo.png"></h1>
+          <span id="tagline">The Decentralized, Autonomous, and Provably Fair Lottery<br>powered by Ethereum</span>
+          <div class="panel panel-default" style="margin-top:20px">
+            <div class="panel-body">
+              <div id="downloads">
+                <a>Mac</a>
+                <a>Windows</a>
+                <a>Linux</a>
+              </div>
+              <p id="hint" class="text-muted">
+                Note: Make sure geth rpc is running and unlocked
+                <br><code>geth --rpc --unlock 0 --rpcport 8545</code>
+              </p>
+              <a href="https://twitter.com/etherpot" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @etherpot</a>
+            </div>
+          </div>
+        </div>
+        <div class="col col-md-7">
+          <img id="screenshot" src="screenshot.png">
+        </div>
+      </div>
+    </div>    
+    <div id="faq">
+    <div class="container">
+      <h3>FAQ</h3>
+      <h4>How much does it cost to play?</h4>
+      <p>Each ticket costs 0.1 ether, or roughly $0.15.</p>
+      <h4>How long does each round last?</h4>
+      <p>6800 blocks, or roughly 1 day.</p>
+      <h4>Whats your cut?</h4>
+      <p>This is just an experiment, so 0%. That means that (except for gas cost) the expected value of playing EtherPot is 1.</p>
+      <h4>How are winners decided?</h4>
+      <p>EtherPot uses the blockhash of the blocks immediately after the round ends to determine the winner.</p>
+      <h4>How do you keep the miners from cheating?</h4>
+      <p>Each pot is split into subpots of 5 ether. Because the value of each supbot is less than the block reward, there is no incentive to cheat.</p>
+      <h4>Who owns EtherPot?</h4>
+      <p>EtherPot is an autonomous contract and has no owner. EtherPot.com is owned by <a href="http://twitter.com/aakilfernandes">@aakilfernandes</a>.</p>
+    </div>
+    </div>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-66637104-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </body>
+</html>
