@@ -17,6 +17,7 @@
     "angular": "~1.4.4",
     "ui.bootstrap": "~0.13.3",
     "angular-bootstrap": "~0.13.3",
-    "flatui": "*"
+    "flatui": "*",
+    "web3": "~0.12.2"
   }
 }

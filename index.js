@@ -11,6 +11,7 @@ app.run(function($rootScope,$http,$interval){
 				$rootScope.lotto = lotto
 				$rootScope.blocksLeft = lotto.blocksPerRound-((lotto.blockNumber)%parseInt(lotto.blocksPerRound))
 				$rootScope.secondsLeft = $rootScope.blocksLeft*averageBlockTime;
+				$rootScope.lotto.potInEther = web3.fromWei(lotto.pot,'ether')
 			})
 	}
 

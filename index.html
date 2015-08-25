@@ -67,7 +67,7 @@
   <body ng-app="app">
   	<div class="container" id="hero">
       <div class="alert alert-info" ng-cloak ng-show="lotto">
-        The current pot is {{lotto.pot}} ether and there are {{blocksLeft}} blocks ( ~
+        The current pot is {{lotto.potInEther}} ether and there are {{blocksLeft}} blocks ( ~
           <span ng-if="timeLeft.hours>0">{{timeLeft.hours}} Hours,</span>
           <span ng-if="timeLeft.minutes>0">{{timeLeft.minutes}} Minutes,</span>
           {{timeLeft.seconds}} Seconds
@@ -129,6 +129,7 @@
       ga('send', 'pageview');
 
     </script>
+    <script type="text/javascript" src="/bower_components/web3/dist/web3.js"></script>
     <script type="text/javascript" src="/bower_components/angular/angular.min.js"></script>
     <script type="text/javascript" src="/index.js"></script>
   </body>
