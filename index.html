@@ -67,12 +67,15 @@
   </head>
   <body ng-app="app">
   	<div class="container" id="hero">
-      <div class="alert alert-info" ng-cloak ng-show="lotto">
+      <div class="alert alert-info" ng-cloak>
+        <div ng-show="!lotto">Loading current stats...</div>
+        <div ng-show="lotto">
         The current pot is {{lotto.potInEther}} ether and there are {{blocksLeft}} blocks ( ~
           <span ng-if="timeLeft.hours>0">{{timeLeft.hours}} Hours,</span>
           <span ng-if="timeLeft.minutes>0">{{timeLeft.minutes}} Minutes,</span>
           {{timeLeft.seconds}} Seconds
         ) until this round ends
+        </div>
       </div>
       <div class="row">
         <div class="col col-md-5">
