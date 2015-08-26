@@ -17,7 +17,7 @@ app.run(function($rootScope,$http,$interval){
 
 	updateLotto()
 
-	$interval(updateLotto,5000)
+	$interval(updateLotto,60000)
 
 	$interval(function(){
 		if(!$rootScope.secondsLeft) return
