@@ -54,14 +54,15 @@
         color:#ECF0F1;
         padding:50px 0;
       }
-      #faq h3{margin-bottom: 10px}
+      h3{margin-bottom: 10px}
       #faq p{color:#ccc}
-      .codeblock{background-color:black;color:white;font-weight: bold}
+      .codeblock{background-color:black;color:white;font-weight: bold;text-align: left}
       #hint{
         line-height: 1.5em;
         margin-top:20px;
       }
       #faq a{color:inherit;}
+      #gettingStarted{background-color:#eee;padding:40px 0;}
     </style>
   </head>
   <body ng-app="app">
@@ -77,30 +78,30 @@
         <div class="col col-md-5">
           <h1>EtherPot <img id="logo" src="logo.png"></h1>
           <span id="tagline">The Decentralized, Autonomous, and Provably Fair Lottery<br>powered by Ethereum</span>
-          <div class="panel panel-default" style="margin-top:20px">
-            <div class="panel-body">
-              <div id="downloads">
-                <a>Mac</a>
-                <a>Windows</a>
-                <a>Linux</a>
-              </div>
-              <p id="hint" class="text-muted">
-                Note: Make sure geth rpc is running and unlocked
-                <br><code>geth --rpc --unlock 0 --rpcport 8545</code>
-              </p>
-              <a href="https://twitter.com/etherpot" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @etherpot</a>
-              <hr>
-              <a href="https://github.com/etherpot">Github</a>
-              <a href="https://github.com/etherpot/contract/blob/master/app/contracts/lotto.sol">Contract</a>
-              <a href="https://etherchain.org/account/0x539f2912831125c9b86451420bc0d37b219587f9">Etherchain</a>
-            </div>
-          </div>
+          <a href="https://twitter.com/etherpot" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @etherpot</a>
+           <hr>
+          <a href="https://github.com/etherpot">Github</a>
+          <a href="https://github.com/etherpot/contract/blob/master/app/contracts/lotto.sol">Contract</a>
+          <a href="https://etherchain.org/account/0x539f2912831125c9b86451420bc0d37b219587f9">Etherchain</a>
         </div>
         <div class="col col-md-7">
           <img id="screenshot" src="screenshot.png">
         </div>
       </div>
-    </div>    
+    </div>
+    <div id="gettingStarted">
+    <div class="container">
+      <h3>Getting Started</h3>
+      <h4>Step 1. Run geth</h4>
+      <pre class="codeblock">geth --rpc --rpccorsdomain "http://localhost:8000" --unlock 0 console</pre>
+      <h4>Step 2. Clone and run etherpot</h4>
+      <pre class="codeblock">git clone https://github.com/etherpot/client.git etherpot-client
+cd etherpot-client
+python -m SimpleHTTPServer 8000</pre>
+        <h4>Step 3. Open your browser to http://localhost:8000</h4>
+    </div>
+    </div>
+    </div>
     <div id="faq">
     <div class="container">
       <h3>FAQ</h3>
